@@ -1,9 +1,12 @@
 import { AuthProvider } from "@/contexts";
-import "@fontsource-variable/oxanium";
-import "@fontsource-variable/orbitron";
-import "@fontsource-variable/montserrat";
-import "@fontsource/rajdhani";
+
+//import "@fontsource-variable/oxanium";
+import "@fontsource-variable/orbitron"; //Titulos
+import "@fontsource-variable/montserrat"; //Cuerpo
+//import "@fontsource/rajdhani";
 import "./globals.css";
+import { Menu } from "./components/Navigation/Menu";
+import { Footer } from "./components/Footer";
 
 export const metadata = {
   title: "E-commerce App",
@@ -13,8 +16,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body>
-        <AuthProvider>{children}</AuthProvider>
+      <body className="min-h-screen flex flex-col">
+        <Menu />
+        {/* Main content area */}
+        <main className="flex-1 font-custom-body2">
+          <AuthProvider>{children}</AuthProvider>
+        </main>
+        <Footer />
       </body>
     </html>
   );

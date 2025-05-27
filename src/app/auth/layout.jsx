@@ -24,7 +24,7 @@ const AuthLayout = ({ children }) => {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <div className="p-4 text-center bg-background-secondary">
+      {/* <div className="p-4 text-center bg-background-secondary">
         <Link href="/">
           <Image
             src="/images/logo.png"
@@ -34,7 +34,7 @@ const AuthLayout = ({ children }) => {
             priority
           />
         </Link>
-      </div>
+      </div> */}
       <div className="flex flex-col flex-1 sm:flex-row">
         <div className="flex items-center justify-center w-full p-4 sm:w-1/2">
           <div className="w-full p-4">{children}</div>
